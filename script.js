@@ -2,6 +2,7 @@ const loginForm = document.getElementById('loginForm');
 const togglePassword = document.getElementById('togglePassword');
 const passwordInput = document.getElementById('password');
 const errorMessage = document.getElementById('errorMessage');
+const registerButton = document.getElementById('registerButton');
 
 togglePassword.addEventListener('click', () => {
   const isHidden = passwordInput.type === 'password';
@@ -29,6 +30,12 @@ loginForm.addEventListener('submit', (event) => {
   }
 
   console.log('Login enviado:', { username, remember });
+});
+
+registerButton.addEventListener('click', () => {
+  errorMessage.style.color = '';
+  errorMessage.textContent = 'Redirecionando para o cadastro...';
+  window.location.href = 'register.html';
 });
 
 window.addEventListener('DOMContentLoaded', () => {
