@@ -15,13 +15,7 @@ loginForm.addEventListener('submit', (event) => {
   errorMessage.textContent = '';
 
   const username = document.getElementById('username').value.trim();
-  const password = passwordInput.value.trim();
   const remember = document.getElementById('remember').checked;
-
-  if (!username || !password) {
-    errorMessage.textContent = 'Preencha usuário e senha.';
-    return;
-  }
 
   if (remember) {
     localStorage.setItem('rememberedUsername', username);
@@ -29,7 +23,8 @@ loginForm.addEventListener('submit', (event) => {
     localStorage.removeItem('rememberedUsername');
   }
 
-  console.log('Login enviado:', { username, remember });
+  localStorage.setItem('currentUsername', username);
+  window.location.href = 'dashboard.html';
 });
 
 registerButton.addEventListener('click', () => {

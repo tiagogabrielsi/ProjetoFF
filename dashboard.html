@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Painel</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="login-container">
+    <div class="dashboard-card">
+      <div class="dashboard-header">
+        <span>Olá, <strong id="usernameDisplay">usuário</strong></span>
+        <button type="button" class="logout-button" id="logoutButton">Sair</button>
+      </div>
+
+      <div class="dashboard-columns">
+        <div class="dashboard-column">
+          <div class="column-title">
+            <span class="column-icon">⚙️</span>
+            <span>PREFERÊNCIAS</span>
+          </div>
+          <ul class="column-list">
+            <li><button type="button">Perfil</button></li>
+            <li><button type="button">Notificações</button></li>
+            <li><button type="button">Idioma</button></li>
+            <li><button type="button">Tema</button></li>
+          </ul>
+        </div>
+
+        <div class="dashboard-column">
+          <div class="column-title">
+            <span class="column-icon">🛡️</span>
+            <span>SEGURANÇA</span>
+          </div>
+          <ul class="column-list">
+            <li><button type="button">Alterar senha</button></li>
+            <li><button type="button">Sessões ativas</button></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script src="dashboard.js"></script>
+</body>
+</html>
