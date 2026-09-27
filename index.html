@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Login</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="login-container">
+    <form class="login-card" id="loginForm">
+      <div class="logo">
+        <svg viewBox="0 0 64 64" width="64" height="64" aria-hidden="true">
+          <circle cx="32" cy="32" r="30" fill="#4f46e5"/>
+          <path d="M32 18a10 10 0 0 0-10 10c0 5 3 8 6 10v6h8v-6c3-2 6-5 6-10a10 10 0 0 0-10-10z" fill="#fff"/>
+          <circle cx="32" cy="28" r="4" fill="#4f46e5"/>
+        </svg>
+        <h1>ProjetoFF</h1>
+      </div>
+
+      <div class="field">
+        <label for="username">Username</label>
+        <input type="text" id="username" name="username" placeholder="Digite seu usuário" autocomplete="username" required>
+      </div>
+
+      <div class="field">
+        <label for="password">Password</label>
+        <div class="input-with-icon">
+          <input type="password" id="password" name="password" placeholder="Digite sua senha" autocomplete="current-password" required>
+          <button type="button" class="toggle-visibility" id="togglePassword" aria-label="Mostrar senha">👁</button>
+        </div>
+      </div>
+
+      <div class="field">
+        <label for="key">Key</label>
+        <input type="text" id="key" name="key" placeholder="Chave de acesso" autocomplete="off">
+      </div>
+
+      <div class="field-row">
+        <label class="checkbox-label">
+          <input type="checkbox" id="remember" name="remember">
+          <span>Remember me</span>
+        </label>
+      </div>
+
+      <div class="error-message" id="errorMessage"></div>
+
+      <button type="submit" class="login-button">Login</button>
+      <button type="button" class="register-button" id="registerButton">Registrar</button>
+    </form>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
